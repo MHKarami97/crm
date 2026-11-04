@@ -127,6 +127,18 @@ export class CytoscapeService {
           },
         },
         {
+          selector: 'edge[type = "referral"], edge[type = "معرف"]',
+          style: {
+            'line-color': '#0d9488',
+            'target-arrow-color': '#0d9488',
+            'line-style': 'dashed',
+            label: 'معرّف',
+            'font-size': '11px',
+            'font-weight': 600,
+            color: '#0f766e',
+          },
+        },
+        {
           selector: 'edge.highlighted',
           style: {
             'line-color': '#f59e0b',

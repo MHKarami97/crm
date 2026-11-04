@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useRoute } from 'vue-router'
-import { Users, Network, Settings } from 'lucide-vue-next'
+import { Users, Store, Network, Settings } from 'lucide-vue-next'
 
 const route = useRoute()
 
@@ -10,6 +10,12 @@ const navItems = [
     name: 'People',
     label: 'مخاطبان',
     icon: Users,
+  },
+  {
+    path: '/customers',
+    name: 'Customers',
+    label: 'مشتریان',
+    icon: Store,
   },
   {
     path: '/graph',
