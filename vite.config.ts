@@ -11,7 +11,7 @@ export default defineConfig({
       includeAssets: ['icons/*.png', 'fonts/**/*.woff2', 'fonts/*.css'],
       manifest: {
         name: 'مدیریت ارتباطات و مشتریان | CRM شخصی',
-        short_name: 'CRM شخصی',
+        short_name: 'مغز متفکر',
         description: 'مدیریت آفلاین روابط، گراف پیوندها و سوابق مشتریان محلی',
         lang: 'fa',
         dir: 'rtl',
