@@ -191,7 +191,7 @@ async function handleDeleteVisit(id: string) {
         <button
           type="button"
           @click="showAddForm = !showAddForm"
-          class="inline-flex items-center gap-1 px-3 py-1.5 text-xs font-medium rounded-xl text-primary-700 dark:text-primary-300 bg-primary-50 dark:bg-primary-950/40 hover:bg-primary-100 transition"
+          class="inline-flex items-center gap-1 px-3 py-1.5 text-xs font-medium rounded-xl text-primary-700 dark:text-primary-300 bg-primary-50 dark:bg-primary-950/40 hover:bg-primary-100 dark:hover:bg-primary-900/60 transition"
         >
           <Plus class="w-3.5 h-3.5" />
           <span>{{ showAddForm ? 'بستن فرم ثبت' : 'ثبت مراجعه جدید' }}</span>
@@ -201,7 +201,7 @@ async function handleDeleteVisit(id: string) {
       <!-- New Visit Form -->
       <div
         v-if="showAddForm"
-        class="p-4 rounded-2xl bg-white dark:bg-slate-850 border-2 border-primary-100 dark:border-primary-900/60 shadow-sm space-y-3 transition-all"
+        class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/90 border-2 border-primary-200 dark:border-primary-800/60 shadow-sm space-y-3 transition-all"
       >
         <div class="text-xs font-bold text-primary-800 dark:text-primary-300 flex items-center gap-1.5">
           <Calendar class="w-4 h-4" />
@@ -382,7 +382,7 @@ async function handleDeleteVisit(id: string) {
           <!-- Notes -->
           <p
             v-if="v.notes"
-            class="text-xs text-slate-600 dark:text-slate-300 bg-slate-50 dark:bg-slate-850 p-2 rounded-xl"
+            class="text-xs text-slate-600 dark:text-slate-300 bg-slate-50 dark:bg-slate-800 p-2 rounded-xl"
           >
             {{ v.notes }}
           </p>

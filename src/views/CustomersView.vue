@@ -230,7 +230,7 @@ const existingNonCustomers = computed(() => {
             'flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold whitespace-nowrap transition border',
             customerStore.activeBusinessType === tmpl.id
               ? 'bg-primary-50 dark:bg-primary-950/60 border-primary-300 dark:border-primary-700 text-primary-800 dark:text-primary-300 shadow-xs'
-              : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400 hover:bg-slate-50',
+              : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-700',
           ]"
         >
           <component :is="templateIcons[tmpl.id]" class="w-3.5 h-3.5" />
@@ -303,7 +303,7 @@ const existingNonCustomers = computed(() => {
           <select
             v-model="customerStore.preferenceFilterKey"
             @change="customerStore.preferenceFilterVal = ''"
-            class="text-xs rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 px-2.5 py-2"
+            class="text-xs rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-100 px-2.5 py-2"
           >
             <option value="">فیلتر ترجیح...</option>
             <option
@@ -407,19 +407,19 @@ const existingNonCustomers = computed(() => {
           <!-- Preferences Chips -->
           <div
             v-if="item.profile.preferences && Object.keys(item.profile.preferences).length > 0"
-            class="flex flex-wrap gap-1 pt-1 border-t border-slate-100 dark:border-slate-750"
+            class="flex flex-wrap gap-1 pt-1 border-t border-slate-100 dark:border-slate-800"
           >
             <span
               v-for="(val, key) in item.profile.preferences"
               :key="key"
-              class="text-[10px] px-2 py-0.5 rounded-lg bg-slate-100 dark:bg-slate-750 text-slate-700 dark:text-slate-300 truncate max-w-[140px]"
+              class="text-[10px] px-2 py-0.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 truncate max-w-[140px]"
             >
               {{ val }}
             </span>
           </div>
 
           <!-- Referrer info & Bottom Quick Actions -->
-          <div class="flex items-center justify-between pt-2 border-t border-slate-100 dark:border-slate-750 text-xs">
+          <div class="flex items-center justify-between pt-2 border-t border-slate-100 dark:border-slate-800 text-xs">
             <!-- Referrer Tag -->
             <div class="flex items-center gap-1 text-[11px] text-slate-500 dark:text-slate-400">
               <UserCheck class="w-3.5 h-3.5 text-primary-600 dark:text-primary-400" />
@@ -434,7 +434,7 @@ const existingNonCustomers = computed(() => {
               <button
                 type="button"
                 @click.stop="openPreferences(item.profile.personId)"
-                class="px-2.5 py-1 text-[11px] font-medium rounded-xl text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-750 transition"
+                class="px-2.5 py-1 text-[11px] font-medium rounded-xl text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 transition"
               >
                 ترجیحات
               </button>
@@ -454,17 +454,14 @@ const existingNonCustomers = computed(() => {
       <!-- Empty State -->
       <EmptyState
         v-else
+        :icon="Store"
         title="مشتری برای این قالب یافت نشد"
         description="مشتریان جدید اضافه کنید یا یکی از مخاطبان موجود را به مشتری تبدیل نمایید."
+        action-label="افزودن اولین مشتری"
+        @action="isAddCustomerModalOpen = true"
       >
-        <template #action>
-          <button
-            type="button"
-            @click="isAddCustomerModalOpen = true"
-            class="px-5 py-2 text-xs font-bold text-white bg-primary-600 hover:bg-primary-700 rounded-xl transition shadow-sm"
-          >
-            افزودن اولین مشتری
-          </button>
+        <template #action-icon>
+          <Plus class="w-4 h-4" />
         </template>
       </EmptyState>
     </main>

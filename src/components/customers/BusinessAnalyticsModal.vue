@@ -95,7 +95,7 @@ const isMasked = computed(() => customerStore.isPrivacyMasked)
             v-for="(item, idx) in analytics.topProfiles"
             :key="item.profile.id"
             @click="emit('selectCustomer', item.profile.personId); emit('update:modelValue', false)"
-            class="flex items-center justify-between p-2 rounded-xl bg-slate-50 dark:bg-slate-850 hover:bg-slate-100 dark:hover:bg-slate-750 transition cursor-pointer"
+            class="flex items-center justify-between p-2 rounded-xl bg-slate-50 dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 transition cursor-pointer"
           >
             <div class="flex items-center gap-2">
               <span

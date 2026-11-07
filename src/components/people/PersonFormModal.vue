@@ -358,7 +358,7 @@ function handleSubmit() {
         <div
           v-for="group in FIELD_GROUPS.filter((g) => g.key !== 'customer' && groupedFields[g.key])"
           :key="group.key"
-          class="p-3.5 bg-slate-50/70 dark:bg-slate-850 dark:bg-slate-800/40 border border-slate-200/80 dark:border-slate-800 rounded-xl space-y-3"
+          class="p-3.5 bg-slate-50/70 dark:bg-slate-800/40 border border-slate-200/80 dark:border-slate-800 rounded-xl space-y-3"
         >
           <h5 class="text-xs font-bold text-primary-800 dark:text-primary-400">
             {{ group.label }}

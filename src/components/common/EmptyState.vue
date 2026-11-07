@@ -44,5 +44,6 @@ const emit = defineEmits<{
       <slot name="action-icon"></slot>
       <span>{{ actionLabel }}</span>
     </button>
+    <slot name="action"></slot>
   </div>
 </template>
