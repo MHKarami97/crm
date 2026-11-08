@@ -5,7 +5,7 @@
       "namespace": "android_app",
       "package_name": "mhk.crm",
       "sha256_cert_fingerprints": [
-        ""
+        "45:34:A8:93:DD:F8:BE:DF:DF:0D:2E:BB:37:41:E7:62:F0:32:32:EF:B6:3F:1A:11:C9:3E:A2:E9:36:F2:77:E8"
       ]
     }
   },
@@ -15,7 +15,7 @@
       "namespace": "cafebazaar_twa",
       "package_name": "mhk.crm",
       "sha256_cert_fingerprints": [
-        "1"
+        "45:34:A8:93:DD:F8:BE:DF:DF:0D:2E:BB:37:41:E7:62:F0:32:32:EF:B6:3F:1A:11:C9:3E:A2:E9:36:F2:77:E8"
       ]
     }
   }
